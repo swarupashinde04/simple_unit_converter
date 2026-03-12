@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Simple Unit Converter</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Simple Unit Converter</h1>
+
+<form method="POST">
+
+<input type="number" step="any" name="value" placeholder="Enter value" required>
+
+<br><br>
+
+<select name="conversion">
+
+<option value="km_to_m">Kilometers to Meters</option>
+<option value="kg_to_g">Kilograms to Grams</option>
+<option value="c_to_f">Celsius to Fahrenheit</option>
+
+</select>
+
+<br><br>
+
+<button type="submit">Convert</button>
+
+</form>
+
+<br>
+
+<h2>{{ result }}</h2>
+
+</div>
+
+</body>
+</html>
